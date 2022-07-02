@@ -1,0 +1,1 @@
+This started as just learning how to use css grid.  I was playing around with a 3x3 grid and changing the size of the elements by changing the margins (to both positive and negative values).  I then played around with doing it on hover (I'll split it into two different files) and when I saw how it worked the idea came to me make this trail... thing.

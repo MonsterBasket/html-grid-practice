@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        div{
+            size: 100% 100%;
+        }
+        #container{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(50,1fr);
+            grid-template-rows: repeat(50,1fr);
+            overflow: hidden;
+        }
+        div div{
+            margin: 0.5%;
+            z-index: 0;
+            background-color: white;
+            transition: margin 0.5s ease-out, z-index 0.5s linear, background-color 3s ease-out;
+        }
+        div div:hover{
+            margin: -20%;
+            z-index: 10;
+            background-color: red;
+            transition-duration: 0s;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+<!--
+    <div class="container">
+        <div class="item item1" style="background-color:darkmagenta"></div>
+        <div class="item item2" style="background-color:green"></div>
+        <div class="item item3" style="background-color:gold"></div>
+        <div class="item item4" style="background-color:lightseagreen"></div>
+        <div class="item item5" style="background-color:royalblue"></div>
+        <div class="item item6" style="background-color:coral"></div>
+        <div class="item item7" style="background-color:wheat"></div>
+        <div class="item item8" style="background-color:palevioletred"></div>
+        <div class="item item9" style="background-color:firebrick"></div>
+    </div>
+-->
+</body>
+<script>
+    function addDiv(){
+        let newDiv;
+        const container = document.getElementById("container");
+        for(let i=0; i<2500; i++){
+            newDiv = document.createElement("div");
+            container.append(newDiv);
+        }
+        console.log("hello");
+    }
+    window.onload = addDiv();
+    /*document.body.onload = addElement;
+
+    function addElement(){
+        var newDiv = document.createElement("div");
+        var currentDiv = document.getElementById("container");
+        document.body.insertBefore(newDiv, currentDiv);
+    }*/
+</script>
+
+</html>
