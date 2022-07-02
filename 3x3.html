@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .container{
+            width: 100vw; /*can easily position div wherever you want*/
+            height: 100vh; /*but make sure to change these to %*/
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            overflow: hidden;
+        }
+        div div{
+            margin: 2%;
+            z-index: 0;
+            padding: 8%;
+            overflow: hidden;
+            transform: translate();
+            transition: margin 3s, z-index 3s, transform 3s,
+                    background-color 3s, border-radius 3s;
+        }
+        .item1:hover{
+            transform: translate(10%, 10%);
+        }
+        .item2:hover{
+            transform: translateY(10%);
+        }
+        .item3:hover{
+            transform: translate(-10%, 10%);
+        }
+        .item4:hover{
+            transform: translateX(10%);
+        }
+        .item6:hover{
+            transform: translateX(-10%);
+        }
+        .item7:hover{
+            transform: translate(10%, -10%);
+        }
+        .item8:hover{
+            transform: translateY(-10%);
+        }
+        .item9:hover{
+            transform: translate(-10%, -10%);
+        }
+
+        .item:hover{
+            margin: -10%;
+            z-index: 1000;
+            border-radius:10%;
+            transition-duration: 0.2s;
+            overflow: scroll;
+            -ms-overflow-style: none; /*IE and Edge*/
+            scrollbar-width: none; /*Firefox*/
+        }
+        .item::-webkit-scrollbar{/*chrome, safari and opera*/
+            display:none;
+        }
+        div div img{
+            width:100%;
+            padding: 0%;
+        }
+        div.item img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1" style="background-color:darkmagenta">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec ipsum in dolor placerat porttitor. Aliquam at enim sapien. Vivamus quis dui elit. Etiam commodo mollis justo, sit amet rutrum mauris venenatis ut. Vestibulum tincidunt vitae mi vitae tincidunt. Integer ac nibh sed leo suscipit maximus. Aliquam tincidunt ac ex sed faucibus. Curabitur diam lorem, luctus porttitor lacinia et, lobortis vitae orci. Cras sagittis massa at lorem sagittis, a pellentesque lectus consequat. Fusce rutrum non justo rutrum sodales. Ut nec neque eu justo malesuada mollis. Vestibulum non tempus erat.</div>
+        <div class="item item2" style="background-color:green"></div>
+        <div class="item item3" style="background-color:gold">Ut id luctus erat. Quisque cursus placerat tincidunt. Fusce vehicula risus nibh, a gravida orci porttitor ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam auctor orci quis nunc placerat ullamcorper. Praesent laoreet semper maximus. Maecenas cursus est eget eros condimentum vulputate. Praesent pretium, arcu eu tincidunt consectetur, augue libero hendrerit ipsum, vel mattis arcu arcu et ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus viverra, ipsum ac ultricies malesuada, massa enim feugiat eros, eu volutpat urna dui a ex. Quisque iaculis auctor lacus, quis congue nisi viverra quis. Morbi feugiat feugiat augue tempus rhoncus. Proin feugiat mollis metus eu imperdiet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.        </div>
+        <div class="item item4" style="background-color:lightseagreen"></div>
+        <div class="item item5" style="background-color:royalblue">Nulla sit amet bibendum quam. Vivamus interdum tortor quis ligula porta pharetra. Aenean gravida sagittis dignissim. Sed elit erat, sodales id purus sed, lacinia faucibus leo. Morbi eu felis aliquet, pretium nisi eu, tempor leo. Ut ornare nibh sed odio rhoncus interdum. Maecenas pellentesque a tortor eu tempor. In mollis sed turpis et tempor.        </div>
+        <div class="item item6" style="background-color:coral"><img src="https://media3.giphy.com/media/wbcMnfHqOJX9K/200.gif"></div>
+        <div class="item item7" style="background-color:wheat"></div>
+        <div class="item item8" style="background-color:palevioletred"></div>
+        <div class="item item9" style="background-color:firebrick"></div>
+    </div>
+</body>
+</html>
